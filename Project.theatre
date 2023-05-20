@@ -1,0 +1,67 @@
+#Theatre ticket booking system
+nprice = 200
+rprice = 400
+n_seats = 120
+r_seats = 10
+while True:
+print("which movie do you want to watch?")
+print("1,Guardians of Galaxy")
+print("2,Jab We Met")
+# print("3,movie 3")
+# print("4,back")
+movie = int(input("choose your movie: "))
+print("which seats do you want: ")
+print("Recliner")
+print("Normal")
+seattype = input("enter seats: ")
+if seattype == "Normal":
+seats = int(input('enter seats: '))
+if seats > n_seats:
+     print("Housfull")
+     print(n_seats)
+else:
+n_seats -= seats
+   print(n_seats)
+bill = seats * nprice
+print("Choose your food combos: ")
+print("1,Popcorn")
+print("2,Cold drinks")
+print("3,Popcorn and cold drink")
+print("4, none of the above")
+combos = int(input("choose your option: "))
+if combos == 1:
+bill += 70
+elif combos == 2:
+bill+= 100
+elif combos == 3:
+bill+= 160
+else:
+print(bill)
+
+elif seattype == "Recliner":
+    seats = int(input("enter number of seats:"))
+    if seats > r_seats:
+        print("Housfull")
+        print(r_seats)
+    else:
+        bill = seats * rprice
+        print("Choose your food combos: ")
+        print("1,Popcorn")
+        print("2,Cold drinks")
+        print("3,Popcorn and cold drink")
+        print("4, none of the above")
+        combos = int(input("choose your option: "))
+        if combos == 1:
+            bill += 70
+        elif combos == 2:
+            bill+= 100
+        elif combos == 3:
+            bill+= 160
+        else:
+            print(bill)
+        
+print("Your amount is", bill)
+      
+next_person = input("next person? ")
+if next_person == "no":
+    break
